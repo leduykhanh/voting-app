@@ -1,16 +1,48 @@
+@font-face {
+    font-family: SwecoSans-Bold;
+    src: url("font/SwecoSans-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SwecoSans-Medium;
+    src: url("font/SwecoSans-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SwecoSans-Regular;
+    src: url("font/SwecoSans-Regular.otf") format("opentype");
+}
 html,
 body {
-  font-family: Consolas, monaco, monospace;
+  font-family: SwecoSans-Bold, Consolas, monaco, monospace;
+  margin:0;
+  padding:0;
+  height:100%;
+}
+#container {
+  padding-top: 20px;
+  height: 100%;
+  background-image: url("images/vote-bg.png");
+  background-size: 100% 75%;
+  background-repeat: no-repeat;
+}
+#container h1, h2 {
+  margin-left: 20%;
+}
+h2 {
+  font-family: SwecoSans-Regular;
 }
 #chart {
 
   width: 100%;
   height: 100%;
+
 }
 #chart > div {
   padding: 20px;
   position: absolute;
   bottom: 0;
+
 }
 table {
   width: 100%;

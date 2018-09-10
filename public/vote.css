@@ -1,0 +1,11 @@
+@font-face {
+    font-family: SwecoSans-Bold;
+    src: url("font/SwecoSans-Bold.otf") format("opentype");
+}
+
+h1 {
+  font-family: SwecoSans-Bold, Consolas, monaco, monospace !important;
+  font-size: 30px !important;
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}

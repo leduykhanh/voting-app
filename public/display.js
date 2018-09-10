@@ -4,7 +4,7 @@ var socket = io();
 var count = 0;
 //chart data
 var chartjson = {
-  "title": "Title Text",
+  "title": "Vilka globala mål har din verksamhet störst utmaningar inom",
   "data": [{
     "count": 0
   }, {
@@ -69,7 +69,6 @@ function getVotes(){
 }
 
 function openFullscreen(elem) {
-  console.log(elem.webkitRequestFullscreen)
   if (elem.webkitRequestFullscreen) {
     elem.webkitRequestFullscreen();
   } else if (elem.mozRequestFullScreen) { /* Firefox */
@@ -103,7 +102,7 @@ titledata.setAttribute('colspan', chartjson.data.length+1);
 titledata.setAttribute('class', 'charttitle');
 titledata.innerText = chartjson.title;
 titlerow.appendChild(titledata);
-barchart.appendChild(titlerow);
+// barchart.appendChild(titlerow);
 chart.appendChild(barchart);
 
 //create the bar row
