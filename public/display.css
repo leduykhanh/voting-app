@@ -18,6 +18,7 @@ body {
   margin:0;
   padding:0;
   height:100%;
+  overflow: hidden;
 }
 #container {
   padding-top: 20px;
@@ -26,9 +27,11 @@ body {
 }
 #container h1, h2 {
   margin-left: 20%;
+  font-size: 40px;
 }
 h2 {
   font-family: SwecoSans-Regular;
+  font-weight: 400;
 }
 #chart {
 
