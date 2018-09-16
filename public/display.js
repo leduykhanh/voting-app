@@ -51,21 +51,30 @@ var colors = ['one', 'two', 'three', 'four', 'five', 'six',
  'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen','fourteen',
   'fifteen', 'sixteen', 'seventeen'];
 
+var DATA = [];
+
 function getVotes(){
   $.get("/vote",
    (data) => {
-     var count = data.reduce((d1, d2) => d1 + d2.count, 0);
 
-     data.map(
-       d => {
-         let bar = document.getElementById(colors[d.id - 1]);
-         let text = document.getElementById('text' + d.id);
-         let percentage = d.count > 0 ? 100 * d.count / count : 1;
-         bar.style.height = percentage + '%';
-         text.innerText = d.count;
-        }
-     )
+     DATA = data;
+     display();
    });
+}
+
+function display(){
+  var count = DATA.reduce((d1, d2) => d1 + d2.count, 0);
+  var max = Math.max.apply(Math, DATA.map(function(o) { return o.count; }));
+  DATA.map(
+    d => {
+      let bar = document.getElementById(colors[d.id - 1]);
+      let text = document.getElementById('text' + d.id);
+      let percentage = d.count > 0 ? 100 * d.count / max : 1;
+      // bar.style.height = percentage + '%';
+      $(bar).animate({ height: percentage + '%'}, 1500);
+      text.innerText = d.count;
+     }
+  )
 }
 
 function openFullscreen(elem) {
@@ -83,7 +92,12 @@ function openFullscreen(elem) {
 getVotes();
 
 socket.on('vote-update',
-  (data) => getVotes()
+  (data) => {
+    // getVotes();
+    let t = DATA.find(o => o.id === data.id);
+    t.count = data.count;
+    display();
+  }
 );
 
 //constants

@@ -22,9 +22,7 @@ body {
 #container {
   padding-top: 20px;
   height: 100%;
-  background-image: url("images/vote-bg.png");
-  background-size: 100% 75%;
-  background-repeat: no-repeat;
+
 }
 #container h1, h2 {
   margin-left: 20%;
@@ -36,7 +34,9 @@ h2 {
 
   width: 100%;
   height: 100%;
-
+  background-image: url("images/background.jpg");
+  background-size: 100% 50%;
+  background-repeat: no-repeat;
 }
 #chart > div {
   padding: 20px;
@@ -81,55 +81,55 @@ table {
 }
 /*Flat UI colors*/
 #one {
-  background: #16A085;
+  background: #dF063F;
 }
 #two {
-  background: #2ECC71;
+  background: #E1B545;
 }
 #three {
-  background: #27AE60;
+  background: #539F3F;
 }
 #four {
-  background: #3498DB;
+  background: #BE0433;
 }
 #five {
-  background: #2980B9;
+  background: #F92E30;
 }
 #six {
-  background: #9B59B6;
+  background: #3CBBDD;
 }
 #seven {
-  background: #8E44AD;
+  background: #F8C232;
 }
 #eight {
-  background: #34495E;
+  background: #9C0B43;
 }
 #nine {
-  background: #2C3E50;
+  background: #FA6434;
 }
 #ten {
-  background: #22313f;
+  background: #D60069;
 }
 #eleven {
-  background: #F1C40F;
+  background: #FB9B37;
 }
 #twelve {
-  background: #F39C12;
+  background: #C69739;
 }
 #thirteen {
-  background: #E67E22;
+  background: #447F47;
 }
 #fourteen {
-  background: #D35400;
+  background: #2594D3;
 }
 #fifteen {
-  background: #E74C3C;
+  background: #5FC239;
 }
 #sixteen {
-  background: #C0392B;
+  background: #16689A;
 }
 #seventeen {
-  background: #ECF0F1;
+  background: #1E486A;
 }
 #seventeen.clouds {
   color: #BDC3C7;
